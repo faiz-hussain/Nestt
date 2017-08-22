@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import realtor from 'realtorca';
 import registerServiceWorker from './registerServiceWorker';
 import {
   withGoogleMap,

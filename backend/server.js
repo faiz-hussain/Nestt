@@ -1,9 +1,16 @@
 const realtor = require('realtorca')
 const bodyParser = require('body-parser')
 const express = require('express'),
-    app = express()
+    app = express(),
+
+    path = require('path'),
+    log = console.log,
+    PORT = process.env.PORT || 8080;
+
+app.use(express.static(path.resolve(__dirname + '../build')));
 
 app.use(bodyParser.json({extended: false}))
+
     
 app.use((req, res, next)=>{
     res.setHeader('Access-Control-Allow-Origin', '*')
@@ -26,10 +33,17 @@ let opts = {
     mode: 'no-cors'
 };
 
+
+app.get('*', (req,res)=>{
+    res.sendFile(path.resolve((__dirname + '../build/index.html')));
+})
+
+
+
 //Get Request to Realtor API gets Data of Listins needed to populate Map. 
 //Express Server needed to be used as making the get request directly from
 // a browser does not allow access. 
-app.get('/', (req, res) => {
+app.get('/map', (req, res) => {
     realtor.post(opts)
         .then(data => {
             res.send(data)
@@ -42,7 +56,7 @@ app.get('/', (req, res) => {
 
 ///Post request to update lisitng in real time depending on price range selevted by user//
 
-app.post('/', (req,res) =>{
+app.post('/map', (req,res) =>{
     let change = {
     LongitudeMin: -79.456215,
     LongitudeMax: -79.354591,
@@ -65,7 +79,4 @@ app.post('/', (req,res) =>{
         });
 })
 
-app.listen(8080, ()=>{
-    console.log('listening on 8080')
-})
-
+ app.listen(PORT, ()=> log(`We are live on port ${PORT}`))

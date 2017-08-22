@@ -13,8 +13,7 @@
     "react-fontawesome": "^1.6.1",
     "react-google-maps": "^7.2.0",
     "react-icons": "^2.2.5",
-    "react-scripts": "1.0.10",
-    "realtorca": "^1.0.0"
+    "react-scripts": "1.0.10"
   },
   "scripts": {
     "start": "react-scripts start",

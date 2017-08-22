@@ -127,7 +127,7 @@ class App extends Component {
 //Inital Get Request to Express Server used to pull data from Realtor.ca in real-time.
   componentWillMount() {
    let dataHolder = [];
-    axios.get('http://localhost:8080')
+    axios.get('/map')
       .then(res => {
         console.log(res.data)
       // .then(data => {
@@ -162,7 +162,7 @@ class App extends Component {
       if (nextState.listingType == this.state.listingType && nextState.minPrice == this.state.minPrice && nextState.maxPrice == this.state.maxPrice){ 
         return false;
       }
-      axios.post('http://localhost:8080',{
+      axios.post('/map',{
         minPrice: nextState.minPrice,
         maxPrice: nextState.maxPrice,
         listingType: nextState.listingType
