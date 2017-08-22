@@ -7,7 +7,7 @@ const express = require('express'),
     log = console.log,
     PORT = process.env.PORT || 8080;
 
-app.use(express.static(path.resolve(__dirname + '../build')));
+app.use(express.static(path.resolve(__dirname + './../build')));
 
 app.use(bodyParser.json({extended: false}))
 
@@ -78,7 +78,7 @@ app.post('/map', (req,res) =>{
 
 
 app.get('*', (req,res)=>{
-    res.sendFile(path.resolve((__dirname + '../build/index.html')));
+    res.sendFile(path.resolve((__dirname + './../build/index.html')));
 })
 
  app.listen(PORT, ()=> log(`We are live on port ${PORT}`))
