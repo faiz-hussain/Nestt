@@ -40,6 +40,8 @@ app.get('/', (req, res) => {
         });
 })
 
+///Post request to update lisitng in real time depending on price range selevted by user//
+
 app.post('/', (req,res) =>{
     let change = {
     LongitudeMin: -79.456215,
