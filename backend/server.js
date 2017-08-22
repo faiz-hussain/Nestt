@@ -34,9 +34,6 @@ let opts = {
 };
 
 
-app.get('*', (req,res)=>{
-    res.sendFile(path.resolve((__dirname + '../build/index.html')));
-})
 
 
 
@@ -77,6 +74,11 @@ app.post('/map', (req,res) =>{
         .catch(err =>{
             console.log(err)
         });
+})
+
+
+app.get('*', (req,res)=>{
+    res.sendFile(path.resolve((__dirname + '../build/index.html')));
 })
 
  app.listen(PORT, ()=> log(`We are live on port ${PORT}`))
