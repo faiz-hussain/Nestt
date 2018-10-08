@@ -6,7 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 import {
   withGoogleMap,
   GoogleMap,
-} from  "../node_modules/react-google-maps/lib";
+} from "../node_modules/react-google-maps/lib";
 
 
 ReactDOM.render(<App />, document.getElementById('root'));
