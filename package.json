@@ -15,7 +15,6 @@
     "react-icons": "^2.2.5",
     "react-scripts": "1.0.10"
   },
-  "proxy": "http://localhost:8080",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
