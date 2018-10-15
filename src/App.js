@@ -123,6 +123,7 @@ class App extends Component {
   }
 
   //Inital Get Request to Express Server used to pull data from Realtor.ca in real-time.
+
   componentDidMount() {
     let dataHolder = [];
     axios.get('/map')
