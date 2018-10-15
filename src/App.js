@@ -10,9 +10,10 @@ import AppBar from 'material-ui/AppBar';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import withScriptjs from "react-google-maps/lib/async/withScriptjs";
-const key = require("./apikey.js");
+const key = require("./apikey");
+console.log(key.key);
 
-const googleMapURL = `https://maps.googleapis.com/maps/api/js?v=3.28&libraries=places,geometry&key=${key}`
+const googleMapURL = `https://maps.googleapis.com/maps/api/js?v=quarterly&key=${key.key}&callback=initMap`;
 
 
 const Map = _.flowRight(
@@ -122,7 +123,7 @@ class App extends Component {
   }
 
   //Inital Get Request to Express Server used to pull data from Realtor.ca in real-time.
-  componentWillMount() {
+  componentDidMount() {
     let dataHolder = [];
     axios.get('/map')
       .then(res => {
