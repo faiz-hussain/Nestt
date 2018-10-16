@@ -80,7 +80,7 @@ app.post('/map', (req, res) => {
 //     app.unsubscribe(express.static('../build'))
 // }
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve((__dirname + '../build/index.html')));
+    res.sendFile(path.resolve((__dirname + './../build/index.html')));
 })
 
 app.listen(PORT, () => log(`We are live on port ${PORT}`))

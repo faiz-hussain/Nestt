@@ -10,7 +10,7 @@ import AppBar from 'material-ui/AppBar';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import withScriptjs from "react-google-maps/lib/async/withScriptjs";
-const key = require("./apikey");
+const key = require("./apikey_dev");
 
 const googleMapURL = `https://maps.googleapis.com/maps/api/js?v=quarterly&key=${key.key}&callback=initMap`;
 
