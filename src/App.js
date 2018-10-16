@@ -11,7 +11,6 @@ import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import withScriptjs from "react-google-maps/lib/async/withScriptjs";
 const key = require("./apikey");
-console.log(key.key);
 
 const googleMapURL = `https://maps.googleapis.com/maps/api/js?v=quarterly&key=${key.key}&callback=initMap`;
 
