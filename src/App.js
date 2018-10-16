@@ -12,7 +12,7 @@ import MenuItem from 'material-ui/MenuItem';
 import withScriptjs from "react-google-maps/lib/async/withScriptjs";
 const key = require("./apikey_dev");
 
-const googleMapURL = `https://maps.googleapis.com/maps/api/js?v=quarterly&key=${key.key}&callback=initMap`;
+const googleMapURL = `https://maps.googleapis.com/maps/api/js?v=quarterly&key=${key.key}`;
 
 
 const Map = _.flowRight(
