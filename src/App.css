@@ -18,17 +18,12 @@ height:250px;
   font-size: 13px;
   display:inline-block;
   float:right;
-  /* max-width: 58%;
-  margin-top:15%; */
 }
 
 .popup h4 {
-    /* display: inline-block; */
-     position: relative; 
-     top: -140px; 
+     position: relative;
+     top: -140px;
      margin-top:4%;
-  /* float:right; */
-   /* margin-left: 5%;  */
 }
 
 .rooms{
@@ -37,7 +32,3 @@ height:250px;
     margin-bottom: 3%;
 }
 
-/* .header{
- text-align: center;
- background-color: rgba(33, 150, 243,1.0);
-} */
