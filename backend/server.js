@@ -5,7 +5,7 @@ const express = require('express'),
 
     path = require('path'),
     log = console.log,
-    PORT = server.listen(process.env.PORT || 8080);
+    PORT = process.env.PORT || 8080;
 
 app.use(express.static(path.resolve(__dirname + './../build')));
 
@@ -76,9 +76,9 @@ app.post('/map', (req, res) => {
         });
 })
 
-if (process.env.NODE_ENV === 'production') {
-    app.unsubscribe(express.static('../build'))
-}
+// if (process.env.NODE_ENV === 'production') {
+//     app.unsubscribe(express.static('../build'))
+// }
 app.get('*', (req, res) => {
     res.sendFile(path.resolve((__dirname + '../build/index.html')));
 })
