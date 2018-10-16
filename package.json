@@ -24,6 +24,6 @@
     "server": "nodemon server.js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "env": "concurrently \"npm run start\" \"npm run client\""
+    "env": "concurrently \"npm run client\" \"npm run start\""
   }
 }
